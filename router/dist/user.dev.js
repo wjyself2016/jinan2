@@ -7,11 +7,11 @@ var user = require('../controller/user');
 var _require = require('../db/mysql'),
     exec = _require.exec;
 
-router.post('/login', user.login);
-router.get('/logout', user.logout);
-router.get('/who', user.who); // other
+router.post('/api/login', user.login);
+router.get('/api/logout', user.logout);
+router.get('/api/who', user.who); // other
 
-router.get('/list', function _callee(ctx) {
+router.get('/api/list', function _callee(ctx) {
   var arr;
   return regeneratorRuntime.async(function _callee$(_context) {
     while (1) {
@@ -31,7 +31,7 @@ router.get('/list', function _callee(ctx) {
     }
   });
 });
-router.post('/update', function _callee2(ctx) {
+router.post('/api/update', function _callee2(ctx) {
   return regeneratorRuntime.async(function _callee2$(_context2) {
     while (1) {
       switch (_context2.prev = _context2.next) {

@@ -2,16 +2,16 @@ const router = require('koa-router')();
 const user = require('../controller/user');
 const { exec } = require('../db/mysql');
 
-router.post('/login', user.login);
-router.get('/logout', user.logout);
-router.get('/who', user.who);
+router.post('/api/login', user.login);
+router.get('/api/logout', user.logout);
+router.get('/api/who', user.who);
 
 // other
-router.get('/list', async (ctx) => {
+router.get('/api/list', async (ctx) => {
     var arr = await exec('select * from ren');
     ctx.body = arr;
 });
-router.post('/update', async (ctx) => {
+router.post('/api/update', async (ctx) => {
     // let data = ctx.request.body;
     // let itemid = [];
     // data.forEach(item => {

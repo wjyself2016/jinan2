@@ -4,6 +4,6 @@ var router = require('koa-router')();
 
 var employee = require('../controller/employee');
 
-router.get('/employee/current', employee.getCurrent);
-router.post('/employee/change', employee.setCurrent);
+router.get('/api/employee/current', employee.getCurrent);
+router.post('/api/employee/change', employee.setCurrent);
 module.exports = router;
