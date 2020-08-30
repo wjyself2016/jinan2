@@ -1,0 +1,18 @@
+insert into ren(
+    itemid,
+    bian,
+    paixu,
+    password,
+    role,
+    title,
+    username
+)
+values(
+    1000,
+    '111111',
+    99,
+    123456,
+    'b',
+    '测试',
+    '1000111111'
+);
